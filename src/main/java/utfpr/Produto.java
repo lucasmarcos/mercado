@@ -1,4 +1,4 @@
-package br;
+package utfpr;
 
 public class Produto {
 
