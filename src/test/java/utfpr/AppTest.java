@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class AppTest
 {
     @Test
-    public void shouldAnswerWithTrue()
+    public void testMercado()
     {
 	    assertEquals(true, true);
     }
