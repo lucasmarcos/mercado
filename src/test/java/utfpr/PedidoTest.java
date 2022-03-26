@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 public class PedidoTest {
 	@Test
 	public void pedidos() {
-		Pedido pedido = new Pedido("Cartão");
+		Pagamento pix = new Pagamento("Pix", 0.0);
+		Pedido pedido = new Pedido(pix);
 		Produto p1 = new Produto("Banana", 10.00);
 
 		pedido.adicionarProduto(p1, 10);

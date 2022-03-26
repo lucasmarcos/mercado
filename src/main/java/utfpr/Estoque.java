@@ -13,6 +13,18 @@ public class Estoque {
 		produtos.put(produto, quantidade);
 	}
 
+	public void removerProduto(Produto produto) {
+
+	}
+
+	public void atualizarProduto(Produto produto, Integer quantidade) {
+
+	}
+
+	public Integer qtdEmEstoque(Produto produto) {
+		return 0;
+	}
+
 	public boolean conferirEstoque(Produto produto, Integer quantidade) {
 		return true;
 	}
