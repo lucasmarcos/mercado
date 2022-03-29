@@ -1,7 +1,6 @@
 package utfpr;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Pedido {
 	private HashMap<Produto, Integer> produtos;

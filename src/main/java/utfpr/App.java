@@ -3,7 +3,6 @@ package utfpr;
 import java.util.Scanner;
 
 public class App {
-
 	static void bemVindo() {
 		System.out.println("Mercado");
 	}
