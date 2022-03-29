@@ -12,8 +12,17 @@ public class Pedido {
 		produtos = new HashMap<Produto, Integer>();
 	}
 
+	public HashMap<Produto, Integer> getProdutos() {
+		return this.produtos;
+	}
+
 	public void adicionarProduto(Produto produto, Integer quantidade) {
-		produtos.put(produto, quantidade);
+		if (this.produtos.containsKey(produto)) {
+			Integer qtdAnterior = this.produtos.get(produto);
+			this.produtos.put(produto, quantidade + qtdAnterior);
+		} else {
+			produtos.put(produto, quantidade);
+		}
 	}
 
 	public Double valorTotal() {
