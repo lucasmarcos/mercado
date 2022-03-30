@@ -1,10 +1,9 @@
 package utfpr;
 
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-public class EstoqueTest {
+class EstoqueTest {
 	private Estoque estoque;
 	private Produto banana;
 

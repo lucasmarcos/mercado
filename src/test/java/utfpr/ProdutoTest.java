@@ -1,17 +1,25 @@
 package utfpr;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-public class ProdutoTest {
-	@Test
-	public void prod() {
+class ProdutoTest {
+	private Produto produto;
+	
+	@BeforeEach
+	void setup() {
 		String nome = "Banana";
 		Double valor = 10.00;
-
-		Produto p = new Produto(nome, valor);
-
-		assertEquals(p.getNome(), "Banana");
-		assertEquals(p.getValor(), 10.00);
+		this.produto = new Produto(nome, valor);
+	}
+	
+	@Test
+	void getNome() {
+		assertEquals(produto.getNome(), "Banana");
+	}
+	
+	@Test
+	void getValor() {
+		assertEquals(produto.getValor(), 10.00);
 	}
 }
