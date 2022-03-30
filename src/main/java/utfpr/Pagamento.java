@@ -1,14 +1,14 @@
 package utfpr;
 
-public enum TIPO_PAGAMENTO {
-	CARTAO, DINHEIRO, CHEQUE
-};
+// public enum TIPO_PAGAMENTO {
+// 	CARTAO, DINHEIRO, CHEQUE
+// };
 
 public class Pagamento {
-	private TIPO_PAGAMENTO tipo;
+	private String tipo;
 	private Double juros;
 
-	public Pagamento(TIPO_PAGAMENTO tipo, Double juros) {
+	public Pagamento(String tipo, Double juros) {
 		this.tipo = tipo;
 		this.juros = juros;
 	}
@@ -17,7 +17,7 @@ public class Pagamento {
 		return juros;
 	}
 
-	public TIPO_PAGAMENTO getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 }

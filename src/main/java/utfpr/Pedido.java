@@ -27,9 +27,10 @@ public class Pedido {
 	public Double valorTotal() {
 		Double total = 0.0;
 
-		for (Map.Entry<Produto, Integer> par : this.produtos.entrySet()) {
+		for (HashMap.Entry<Produto, Integer> par : this.produtos.entrySet()) {
 			Double custo = par.getKey().getValor() * par.getValue();
-			total += custo + custo * pagamento.getJuros();
+			Double juros = (custo * pagamento.getJuros())/100.0;
+			total += custo + juros;
 		};
 
 		return total;
