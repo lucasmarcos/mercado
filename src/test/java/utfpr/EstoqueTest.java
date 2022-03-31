@@ -35,6 +35,12 @@ class EstoqueTest {
 	}
 
 	@Test
+	void atualizarInezistente() {
+		assertFalse(estoque.atualizarProduto(banana, 2));
+	}
+
+	
+	@Test
 	void remover() {
 		estoque.adicionarProduto(banana, 124);
 		estoque.removerProduto(banana);
@@ -46,5 +52,15 @@ class EstoqueTest {
 		estoque.adicionarProduto(banana, 10);
 		estoque.adicionarProduto(banana, 4);
 		assertEquals(estoque.qtdEmEstoque(banana), 14);
+	}
+
+	@Test
+	void venderExcedente() {
+		Pedido pedido = new Pedido(new Pagamento("Dinheiro", 0.0));
+	
+		estoque.adicionarProduto(banana, 10);
+		pedido.adicionarProduto(banana, 11);
+		
+		assertFalse(estoque.vender(pedido));
 	}
 }

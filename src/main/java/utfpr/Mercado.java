@@ -6,9 +6,13 @@ public class Mercado {
 	public Mercado() {
 		this.estoque = new Estoque();
 	}
+	
+	public Estoque getEstoque() {
+		return this.estoque;
+	}
 
-	public void efetuarPedido(Pedido pedido, Cliente cliente) {
+	public boolean efetuarPedido(Pedido pedido, Cliente cliente) {
 		Double total = pedido.valorTotal();
-		estoque.vender(pedido);
+		return (estoque.vender(pedido));
 	}
 }

@@ -35,4 +35,8 @@ public class Pedido {
 
 		return total;
 	}
+	
+	public Integer qtd(Produto produto) {
+		return produtos.get(produto);
+	}
 }
