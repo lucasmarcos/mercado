@@ -1,3 +1,9 @@
+# Equipe
+
+- Lucas da Silva Marcos
+- Leonardo
+- Fabio Lorenzetti 
+
 # Especificação
 
 O supermercado vende diferentes tipos de produtos.
